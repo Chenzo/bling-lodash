@@ -1,0 +1,134 @@
+@font-face {
+	font-family: "demo-icons";
+	src: url('/fonts/demo-icons.eot');
+	src: url('/fonts/demo-icons.eot?#iefix') format('eot'),
+		url('/fonts/demo-icons.woff2') format('woff2'),
+		url('/fonts/demo-icons.woff') format('woff'),
+		url('/fonts/demo-icons.ttf') format('truetype'),
+		url('/fonts/demo-icons.svg#demo-icons') format('svg');
+}
+
+.icon:before {
+	font-family: "demo-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-CTA_arrow:before {
+	content: "\E001";
+}
+
+.icon-EHO:before {
+	content: "\E002";
+}
+
+.icon-LA_Sudio_icon:before {
+	content: "\E003";
+}
+
+.icon-bed:before {
+	content: "\E004";
+}
+
+.icon-bike:before {
+	content: "\E005";
+}
+
+.icon-camera_icon:before {
+	content: "\E006";
+}
+
+.icon-collection_arrow_sm:before {
+	content: "\E007";
+}
+
+.icon-facebook:before {
+	content: "\E008";
+}
+
+.icon-floorplan_icon:before {
+	content: "\E009";
+}
+
+.icon-floors:before {
+	content: "\E00A";
+}
+
+.icon-garage:before {
+	content: "\E00B";
+}
+
+.icon-instagram:before {
+	content: "\E00C";
+}
+
+.icon-leaf_icon:before {
+	content: "\E00D";
+}
+
+.icon-map_icon:before {
+	content: "\E00E";
+}
+
+.icon-map_pinmap:before {
+	content: "\E00F";
+}
+
+.icon-matterport:before {
+	content: "\E010";
+}
+
+.icon-mouse:before {
+	content: "\E011";
+}
+
+.icon-pinterest:before {
+	content: "\E012";
+}
+
+.icon-play_icon:before {
+	content: "\E013";
+}
+
+.icon-schoo_icon:before {
+	content: "\E014";
+}
+
+.icon-shopping_icon:before {
+	content: "\E015";
+}
+
+.icon-sitemap_icon:before {
+	content: "\E016";
+}
+
+.icon-sq_ft:before {
+	content: "\E017";
+}
+
+.icon-thejohn:before {
+	content: "\E018";
+}
+
+.icon-toll_blog_icon:before {
+	content: "\E019";
+}
+
+.icon-tub:before {
+	content: "\E01A";
+}
+
+.icon-twitter:before {
+	content: "\E01B";
+}
+
+.icon-village_arrow:before {
+	content: "\E01C";
+}

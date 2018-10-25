@@ -1,0 +1,32 @@
+{
+  "name": "porterranch",
+  "version": "3.2.0",
+  "description": "Porter Ranch Lifestyle 2018 Redesign",
+  "main": "gulp",
+  "repository": "git@bitbucket.org:tollbrothers/com.liveatporterranch.www.git",
+  "author": "Toll Brothers Web Team",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-iconfont": "^9.1.0",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "^0.0.2",
+    "gulp.spritesmith": "^6.2.1",
+    "pump": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-run-command": "^0.0.9",
+    "npm": "^6.1.0"
+  }
+}
