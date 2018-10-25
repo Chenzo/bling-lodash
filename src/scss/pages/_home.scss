@@ -22,3 +22,18 @@ section {
 
 }
 
+
+
+.box-style {
+	width: 100px;
+	height: 100px;
+	background-color: $blackboard;
+	display: inline-block;
+	color: white;
+	margin: 20px;
+
+
+	&.red-font {
+		color: red;
+	}
+}
