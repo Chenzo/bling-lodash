@@ -26,6 +26,8 @@
                 <div id="box" class="box-style">I'm #box</div>
                 <div class="js-getme box-style">I'm .js-getme</div>
 
+                <div class="box-style js-tester">I'm just a box <p>with a p</p></div>
+
 
             </article>
 
