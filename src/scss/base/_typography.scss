@@ -24,10 +24,20 @@ body {
 
 
 h1,h2,h3 {
-    padding: 20px;
+    margin: 20px;
 }
 
 .simpleLink {
     padding: 10px 20px;
     color: $oxblood;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+
+h2 {
+	font-size: 20px;
+	color: black;
 }

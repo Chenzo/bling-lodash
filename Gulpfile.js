@@ -25,6 +25,12 @@ Generate SVG Font:
 */
 
 
+var resources_path = "./src/";
+var www_path = "./www/";
+var scriptsPath = './src/js/';
+var fontName = 'toll-icons';
+
+
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	concat = require('gulp-concat'),
@@ -45,10 +51,23 @@ var gulp = require('gulp'),
     run = require('gulp-run-command').default;
 
 var browserSync = require('browser-sync').create();
-var scriptsPath = './src/js/';
-var fontName = 'toll-icons';
 
 
+//For Webpack/JS: 
+var webpack = require('webpack'),
+    webpackStream = require('webpack-stream'),
+    webpackConfig = require('./src/webpack/webpack.config.js'),
+    webpackConfigUgly = require('./src/webpack/webpack.config.uglify.js');
+var named = require('vinyl-named');
+
+//For Options
+var minimist = require('minimist')
+    gulpif = require('gulp-if');
+var knownOptions = {
+    string: 'env',
+    default: { env: process.env.NODE_ENV || 'production' }
+};
+var options = minimist(process.argv.slice(2), knownOptions);
 
 
 //Loop through a directory and get the directories within...
@@ -120,7 +139,12 @@ gulp.task('javascripting', function() {
     browserSync.reload;
 });
 
-
+gulp.task('javascript_webpack', function() {
+    gulp.src(resources_path + 'js/*.js')
+      .pipe(named()) //swaps in individual files
+      .pipe(webpackStream(gulpif(options.env === 'production', webpackConfigUgly, webpackConfig)), webpack).on('error', console.error.bind(console))
+      .pipe(gulp.dest(www_path + 'js'));
+  });
 
 
 gulp.task('sprite', function () {
@@ -204,11 +228,11 @@ Default Watch Task
 runs the sass and javascript commands on change in the SRC folder
 
 */
-gulp.task('default', ['styles', 'javascripting'] ,function() {
+gulp.task('default', ['styles', 'javascript_webpack'] ,function() {
 	browserSync.init({
 	    proxy: 'http://localhost:8088'
 	});
-	gulp.watch('./src/js/**/*.js',['js', 'updateCacheBuster']);
+	gulp.watch('./src/js/**/*.js',['javascript_webpack', 'updateCacheBuster']);
     gulp.watch('./src/scss/**/*.scss',['styles', 'updateCacheBuster']);
     //gulp.watch("./www/*.php").on('change', browserSync.reload);
     gulp.watch("./www/*.html").on('change', browserSync.reload);

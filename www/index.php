@@ -21,7 +21,7 @@
 
         </section>
 
-        <script async="async" type="application/javascript" src="one.js"></script>
+        <script async="async" type="application/javascript" src="/js/one.js"></script>
         
     </body>
 </html>
